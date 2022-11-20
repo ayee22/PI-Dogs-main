@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Marhey&display=swap');
+
+.body{
+    background-image: url(https://animesher.com/orig/0/84/843/8434/animesher.com_manga-puppy-gif-843473.gif);
+    display: flex;
+    height: 609px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.tittle{
+    font-family: 'Marhey', cursive;
+    color: #AA8B56;
+    font-size: xxx-large;
+    margin: 120px;
+    text-shadow: -15px 11px 12px;
+    
+}
+
+a {
+    display: flex;
+    flex-direction: row-reverse;
+    text-decoration: none;
+}
+
+.button{
+    box-shadow: -14px 15px 22px -4px #749f82;
+	background-color:#749f82;
+	border-radius:40px;
+	display:inline-block;
+	cursor:pointer;
+	color:#425f57;
+    font-family: 'Marhey', cursive;
+    font-size: 23px;
+    font-weight:bold;
+	padding:14px 36px;
+    border: none
+}
+
+.button:hover{
+    background-color: #c8dbbe
+}
+.button:active{
+    position: relative;
+    top: 1px
+}
+
