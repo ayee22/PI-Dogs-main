@@ -1,10 +1,12 @@
 import React from 'react'
+import s from './filters.module.css'
 
-export default function Filters({orderAlph, filterWeight, filterByAPIorDB}) {
+
+export default function Filters({orderAlph, filterWeight, filterByAPIorDB, temperaments, filterTemp}) {
   
 
   return (
-     <div>
+     <div className={s.filters}>
         <select defaultValue="filters" onChange={(e)=> orderAlph(e)}>
          <option value="filters" selected={true} disabled={true}>Filter by:</option>
          <option value="A-Z">A-Z</option>
@@ -20,10 +22,15 @@ export default function Filters({orderAlph, filterWeight, filterByAPIorDB}) {
           <option value="db">Database</option>
           <option value="api">API</option>
         </select>
-        <select defaultValue="temperament">
+        <select defaultValue="temperament" onChange={(e) => filterTemp(e)}>
           <option value="temperament" selected={true} disabled={true}>Temperaments</option>
+          <option value="all">All</option>
+          {
+            temperaments.map(t => {
+              return <option value={t.name} key={t.id}>{t.name}</option>
+            })
+          }
         </select>
-         
      </div>
 
 

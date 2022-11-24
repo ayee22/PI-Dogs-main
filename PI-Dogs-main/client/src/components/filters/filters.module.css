@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+.filters {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5px;
+    background-image: url(https://i.pinimg.com/564x/a5/b9/82/a5b982f3401f42dba5c5bb49bc0d4b11.jpg);
+    margin: auto;
+    padding: 5px;
+}
+
+.filters select {
+    border: none;
+    background-color: #824f9f;
+    color: white;
+    height: 20px;
+    border-radius: 7px;
+    padding: 2px
+}
+
+.filters option {
+    font-family: 'Ubuntu', sans-serif;
+}

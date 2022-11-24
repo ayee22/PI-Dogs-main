@@ -1,9 +1,65 @@
-img {
-    width: 400px
+@import url('https://fonts.googleapis.com/css2?family=Marhey&display=swap');
+.container img {
+    padding: 10px;
+    border-radius: 60px;
+    width: 380px
 }
 
 .container{
+    width: 100%;
+    height: 100vh;
+    margin-block: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-image: url(https://i.pinimg.com/originals/7a/bd/85/7abd85831dd326e6ac08950cff24cba2.gif);
+    justify-content: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    
+}
+
+.detail{
+    border: 4px solid black;
+    display: grid;
+    justify-items: center;
+    margin: 20px;
+    padding: 20px;
+    background-color: #bde0fe;
+    border-color: #cdb4db;
+    border-radius: 60px;
+}
+
+.container h1 {
+    font-family: 'Marhey', cursive;
+    color: #824f9f;
+}
+
+.container span{
+    color: #1d3557;
+    font-size: 15px;
+}
+
+.back {
+    border: none;
+    background-color: white;
+    font-family: 'Ubuntu', sans-serif;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    height: 30px;
+    width: 60px;
+}
+
+.back:hover{
+    background-color: #ae94bb;
+}
+
+.loading {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 40px;
+    text-align: center;
+
 }

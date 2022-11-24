@@ -1,11 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Marhey&display=swap');
 ul {
     display: flex;
+    justify-content: center;
+    align-items: center;
     list-style: none;
     font-size: 20px;
     cursor: pointer;
+    background-color: #f1c0e8;
+    height: 40px;
+    width:97%;
+    margin: 0;
     
 }
 
-li {
+.container li {
+    font-family: 'Marhey', cursive;
     margin: 10px
 }
+
+.container li:hover {
+    border-top: 2px solid #824f9f;
+}
+

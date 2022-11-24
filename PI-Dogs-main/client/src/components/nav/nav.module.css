@@ -28,4 +28,29 @@
     text-shadow: -2px 3px 3px #9f86c0;
     cursor: pointer;
 }
+.nav input {
+    border-radius: 7px;
+    border: 1px solid #9567ad;
+    background-color: #ae94bb;
+    box-shadow: inset 5px 8px 5px 0px rgba(0,0,0,0.27);
+    height: 25px;
+    margin-right: 5px;
+}
 
+.nav input::placeholder {
+    color: white;
+    padding-left: 5px;
+}
+
+.nav button {
+    background-color: white;
+    font-family: 'Ubuntu', sans-serif;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    height: 25px;
+}
+
+.nav button:hover{
+    background-color: #ae94bb;
+}

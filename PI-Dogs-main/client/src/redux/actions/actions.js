@@ -27,6 +27,49 @@ export function getDogID(id){
     }
 }
 
+export function searchDog(name){
+    return async(dispatch) => {
+        try {
+            const json = await axios.get(`http://localhost:3001/dogs?name=${name}`)
+            return dispatch({
+                type: 'SEARCH_DOG',
+                payload: json.data
+            })
+        } catch (error) {
+            console.log(error)
+        }
+    }
+}
+
+export function getTemperaments(){
+    return async(dispatch) => {
+        try {
+            const json = await axios.get('http://localhost:3001/temperaments')
+            return dispatch({
+                type: 'GET_TEMPERAMENTS',
+                payload: json.data
+            })
+        } catch (error) {
+            console.log(error)
+        }
+    }
+}
+
+export function postBreed(payload){
+    return async(dispatch) => {
+        try {
+            const json = await axios.post('http://localhost:3001/dogs', payload) //payload que me llega en el front
+            return dispatch({
+                type: 'POST_BREED',
+                payload: json.data
+            })
+        } catch (error) {
+            console.log(error)
+        }
+    }
+}
+
+
 export function weightFilter(payload){
     return {
         type: 'FILTER_WEIGHT',
@@ -49,3 +92,23 @@ export function orderByName(payload){
     }
 }
 
+export function filterByTemperament(payload){
+    return {
+        type: 'FILTER_BY_TEMP',
+        payload
+    }
+}
+
+export function filterByName(payload){
+    return {
+        type: 'FILTER_BY_NAME',
+        payload
+    }
+}
+
+export function clearDeatil() {
+    return {
+        type: 'CLEAR_DETAIL',
+       
+    }
+}
