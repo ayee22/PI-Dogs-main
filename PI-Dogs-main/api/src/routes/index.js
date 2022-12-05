@@ -79,7 +79,7 @@ router.post('/dogs', async (req,res)=>{
     }
 })// FUNCIONA!!!
 
-router.post('/temperaments', async(req, res) => {
+/* router.post('/temperaments', async(req, res) => {
   const {name} = req.body
   if (!name) {
     res.status(400).send('TEMPERAMENT NEEDED')
@@ -90,6 +90,6 @@ router.post('/temperaments', async(req, res) => {
     console.log(temperament)
     res.status(202).send(temperament)
   }
-})
+}) */
 
 module.exports = router;
