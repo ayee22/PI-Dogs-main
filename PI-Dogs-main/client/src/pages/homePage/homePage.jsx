@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Nav from '../../components/nav/nav'
 import {useDispatch, useSelector} from 'react-redux'
-import { clearDeatil, getDogs, getTemperaments, orderByName, weightFilter, filterSource, filterByTemperament, filterByName } from '../../redux/actions/actions'
+import { clearDeatil, getDogs, getTemperaments, orderByName, weightFilter, filterSource, filterByTemperament, filterByName, improviso } from '../../redux/actions/actions'
 import Cards from '../../components/cards/cards'
 import s from './homePage.module.css'
 import Paginado from '../../components/paginado/paginado'
@@ -52,13 +52,14 @@ export default function HomePage() {
     e.preventDefault()
     dispatch(filterSource(e.target.value))
     setOrder(e.target.value)
+    setCurrentPage(1)
   
   }
   
   //filtro por temperamento
   const filterTemp = (e) => {
      dispatch(filterByTemperament(e.target.value));
-    setDogsAll(e.target.value)
+    //setDogsAll(e.target.value)
   }
    
 //searcg bar
@@ -66,14 +67,12 @@ export default function HomePage() {
     dispatch(filterByName(query));
   }
 
-  const handleClick =() => {
-    
-  }
 
-  console.log(allDogs.filter(f => f.weight[1] <= 10))
+  
+
   return (
     <div>
-      <button onClick={handleClick}>click me</button>
+     
       <div>
           <Nav handleSearch={handleSearch} />
       </div>
@@ -85,7 +84,7 @@ export default function HomePage() {
       </div>
       <div className={s.containerCards}>
           {
-              currentDogs && currentDogs.map((e) => {
+            currentDogs && currentDogs.map((e) => {
               return <Cards name={e.name} image={e.image} id={e.id} weight={e.weight} temperaments={e.created === true ? e.temperaments.map(t => t.name) : e.temperaments} key={e.id}/> 
               
             })
@@ -94,3 +93,5 @@ export default function HomePage() {
     </div> 
   )
 }
+
+

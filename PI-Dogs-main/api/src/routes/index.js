@@ -79,4 +79,17 @@ router.post('/dogs', async (req,res)=>{
     }
 })// FUNCIONA!!!
 
+router.post('/temperaments', async(req, res) => {
+  const {name} = req.body
+  if (!name) {
+    res.status(400).send('TEMPERAMENT NEEDED')
+  } else {
+    const temperament = await Temperament.create({
+      name
+    })
+    console.log(temperament)
+    res.status(202).send(temperament)
+  }
+})
+
 module.exports = router;

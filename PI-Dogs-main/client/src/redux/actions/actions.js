@@ -12,6 +12,14 @@ export function getDogs(){
         console.log(error)        
     }}
 }
+/* export function getdogs(){
+    return (dispatch) => {
+        axios.get('/dogs')
+        .then(response => {
+            dispatch({ type: 'GETDOGS', payload: response.data})
+        })
+    }
+} */
 
 export function getDogID(id){
     return async(dispatch) => {
@@ -112,3 +120,4 @@ export function clearDeatil() {
        
     }
 }
+

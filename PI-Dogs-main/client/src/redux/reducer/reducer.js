@@ -105,6 +105,7 @@ function rootReducer(state= initialState, action){
                 idDog: []
             }
         }
+        
         default: 
             return state
     }
