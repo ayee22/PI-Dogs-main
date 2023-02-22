@@ -6,7 +6,7 @@ const {
   RAILWAY_DEPLOY_DB
 } = process.env;
 
-const sequelize = new Sequelize( RAILWAY_DEPLOY_DB, {
+const sequelize = new Sequelize(RAILWAY_DEPLOY_DB, {
   logging: false, // set to console.log to see the raw SQL queries
   native: false, // lets Sequelize know we can use pg-native for ~30% more speed
 });
