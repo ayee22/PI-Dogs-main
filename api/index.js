@@ -20,7 +20,7 @@
 require("dotenv").config();
 const server = require('./src/app.js');
 const { conn } = require('./src/db.js');
-const { getTemperaments } = require('../api/src/controllers/index')
+const { getTemperaments } = require('./src/controllers/index')
 const PORT = process.env.PORT || 3001
 
 // Syncing all the models at once.
