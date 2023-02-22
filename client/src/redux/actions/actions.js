@@ -1,9 +1,10 @@
 import axios from 'axios'
+const url = "https://pi-dogs-main-production-7a8c.up.railway.app"
 
 export function getDogs(){
     return async (dispatch)=>{
     try {
-      const json = await axios.get('http://localhost:3001/dogs')
+      const json = await axios.get(`${url}/dogs`)
       return dispatch({
           type: "GET_DOGS",
           payload: json.data
@@ -24,7 +25,7 @@ export function getDogs(){
 export function getDogID(id){
     return async(dispatch) => {
         try {
-            const json = await axios.get(`http://localhost:3001/dogs/${id}`)
+            const json = await axios.get(`${url}/dogs/${id}`)
             return dispatch({
                 type: "GET_DOG_ID",
                 payload: json.data
@@ -38,7 +39,7 @@ export function getDogID(id){
 export function searchDog(name){
     return async(dispatch) => {
         try {
-            const json = await axios.get(`http://localhost:3001/dogs?name=${name}`)
+            const json = await axios.get(`${url}/dogs?name=${name}`)
             return dispatch({
                 type: 'SEARCH_DOG',
                 payload: json.data
@@ -52,7 +53,7 @@ export function searchDog(name){
 export function getTemperaments(){
     return async(dispatch) => {
         try {
-            const json = await axios.get('http://localhost:3001/temperaments')
+            const json = await axios.get(`${url}/temperaments`)
             return dispatch({
                 type: 'GET_TEMPERAMENTS',
                 payload: json.data
@@ -66,7 +67,7 @@ export function getTemperaments(){
 export function postBreed(payload){
     return async(dispatch) => {
         try {
-            const json = await axios.post('http://localhost:3001/dogs', payload) //payload que me llega en el front
+            const json = await axios.post(`${url}/dogs`, payload) //payload que me llega en el front
             return dispatch({
                 type: 'POST_BREED',
                 payload: json.data
