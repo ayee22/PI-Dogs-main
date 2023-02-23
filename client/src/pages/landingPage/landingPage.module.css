@@ -3,7 +3,7 @@
 .body{
     background-image: url(https://animesher.com/orig/0/84/843/8434/animesher.com_manga-puppy-gif-843473.gif);
     display: flex;
-    height: 609px;
+    height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

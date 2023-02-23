@@ -19,7 +19,7 @@
     align-items:center;
     justify-content: center;
     background-image: url(https://i.pinimg.com/originals/7a/bd/85/7abd85831dd326e6ac08950cff24cba2.gif);
-    
+    height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -62,6 +62,8 @@ form {
     justify-content: center;
     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.27);
     border-radius: 8px;
+    height: 75%;
+    gap: 10px;
 }
 
 .item div:hover {
@@ -98,6 +100,7 @@ form {
     height: 25px;
     border-radius: 8px;
     color: white;
+    height: 7%;
 }
 
 .boton:hover {
@@ -117,7 +120,7 @@ form {
 
 .error {
   color: red;
-  font-size: 13px;
+  font-size: 17px;
   margin: 0;
 }
 

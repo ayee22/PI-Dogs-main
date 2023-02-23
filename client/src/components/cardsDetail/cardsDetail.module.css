@@ -2,7 +2,7 @@
 .container img {
     padding: 10px;
     border-radius: 60px;
-    width: 380px
+    width: 88%;
 }
 
 .container{
@@ -30,6 +30,8 @@
     background-color: #bde0fe;
     border-color: #cdb4db;
     border-radius: 60px;
+    width: 30%;
+    height: 70%;
 }
 
 .container h1 {
